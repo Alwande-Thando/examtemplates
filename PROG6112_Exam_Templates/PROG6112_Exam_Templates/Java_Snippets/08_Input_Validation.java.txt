@@ -1,0 +1,21 @@
+String name = txtName.getText().trim();
+if (name.isEmpty()) {
+    JOptionPane.showMessageDialog(this, "Please enter a name.");
+    return;
+}
+
+double price;
+int quantity;
+try {
+    price = Double.parseDouble(txtPrice.getText().trim());
+    quantity = Integer.parseInt(txtQuantity.getText().trim());
+} catch (NumberFormatException ex) {
+    JOptionPane.showMessageDialog(this, "Enter valid numeric values.");
+    return;
+}
+
+if (price <= 0 || quantity <= 0) {
+    JOptionPane.showMessageDialog(this, "Values must be greater than zero.");
+    return;
+}
+// Continue only after all validation succeeds.

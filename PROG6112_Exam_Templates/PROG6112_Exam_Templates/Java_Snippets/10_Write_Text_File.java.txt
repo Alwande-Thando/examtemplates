@@ -1,0 +1,10 @@
+import java.io.*;
+
+try (PrintWriter out = new PrintWriter(new FileWriter("report.txt"))) {
+    out.println("REPORT TITLE");
+    out.println("Name: " + name);
+    out.println("Total: " + total);
+} catch (IOException ex) {
+    JOptionPane.showMessageDialog(this, "Write error: " + ex.getMessage());
+}
+// FileWriter("report.txt", true) appends instead of overwriting.

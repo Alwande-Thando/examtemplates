@@ -1,0 +1,1 @@
+Open as a Maven project in IntelliJ IDEA or NetBeans. Main class: exam.Main. Includes a basic Swing form, File > Exit, Tools > Process/Clear and a JUnit 5 example. Replace TODO logic with the actual exam requirements.

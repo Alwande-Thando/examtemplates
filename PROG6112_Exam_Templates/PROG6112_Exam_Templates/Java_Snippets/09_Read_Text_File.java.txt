@@ -1,0 +1,19 @@
+import java.io.*;
+import java.nio.file.*;
+
+Path path = Paths.get("data.txt");
+try (BufferedReader br = Files.newBufferedReader(path)) {
+    String line;
+    while ((line = br.readLine()) != null) {
+        String[] fields = line.split(","); // change delimiter as required
+        if (fields.length == 3) {
+            String field1 = fields[0].trim();
+            String field2 = fields[1].trim();
+            String field3 = fields[2].trim();
+            // TODO: store/display the fields.
+        }
+    }
+} catch (IOException ex) {
+    JOptionPane.showMessageDialog(null, "Read error: " + ex.getMessage());
+}
+// Pipe-delimited alternative: line.split("\\|")

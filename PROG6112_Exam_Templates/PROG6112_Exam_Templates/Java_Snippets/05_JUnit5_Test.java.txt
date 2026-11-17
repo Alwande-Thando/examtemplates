@@ -1,0 +1,19 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class CalculationTest {
+    @Test
+    void calculateTotal_returnsExpectedTotal() {
+        Calculation calc = new Calculation();
+        int[] values = {10, 20, 30};
+        assertEquals(60, calc.calculateTotal(values));
+    }
+
+    @Test
+    void calculateAverage_returnsExpectedAverage() {
+        Calculation calc = new Calculation();
+        int[] values = {10, 20, 30};
+        assertEquals(20.0, calc.calculateAverage(values), 0.001);
+    }
+}
+// Change names, data and expected results to match the exam.

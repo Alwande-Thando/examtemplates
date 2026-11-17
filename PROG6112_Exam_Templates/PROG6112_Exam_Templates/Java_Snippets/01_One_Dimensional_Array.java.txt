@@ -1,0 +1,14 @@
+// Declare and populate
+String[] names = {"Name A", "Name B", "Name C"};
+int[] values = {120, 250, 180};
+
+// Loop through matching positions
+for (int i = 0; i < names.length; i++) {
+    System.out.println(names[i] + ": " + values[i]);
+}
+
+// User input example:
+// int[] values = new int[5];
+// for (int i = 0; i < values.length; i++) {
+//     values[i] = Integer.parseInt(JOptionPane.showInputDialog("Enter value"));
+// }

@@ -1,0 +1,12 @@
+// Example: rows = items; columns = months/quarters
+String[] names = {"Item A", "Item B", "Item C"};
+int[][] data = {{100, 150, 200}, {120, 130, 170}, {90, 110, 160}};
+
+for (int row = 0; row < data.length; row++) {
+    System.out.print(names[row] + ": ");
+    for (int col = 0; col < data[row].length; col++) {
+        System.out.print(data[row][col] + " ");
+    }
+    System.out.println();
+}
+// data.length = number of rows; data[row].length = columns in that row.

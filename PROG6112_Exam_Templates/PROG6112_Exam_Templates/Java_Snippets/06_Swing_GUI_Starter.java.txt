@@ -1,0 +1,47 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class MyApp extends JFrame {
+    private JTextField txtInput = new JTextField(15);
+    private JTextArea txtOutput = new JTextArea(10, 35);
+    private JComboBox<String> cmbChoice =
+        new JComboBox<>(new String[]{"Option 1", "Option 2"});
+
+    public MyApp() {
+        setTitle("Application Title");
+        setSize(600, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        JButton btnProcess = new JButton("Process");
+        JButton btnClear = new JButton("Clear");
+        JPanel top = new JPanel(new FlowLayout());
+        top.add(new JLabel("Input:"));
+        top.add(txtInput);
+        top.add(cmbChoice);
+        top.add(btnProcess);
+        top.add(btnClear);
+
+        txtOutput.setEditable(false);
+        setLayout(new BorderLayout());
+        add(top, BorderLayout.NORTH);
+        add(new JScrollPane(txtOutput), BorderLayout.CENTER);
+
+        btnProcess.addActionListener(e -> process());
+        btnClear.addActionListener(e -> clearForm());
+    }
+
+    private void process() {
+        // TODO: validate input, calculate and display the required output.
+    }
+
+    private void clearForm() {
+        txtInput.setText("");
+        txtOutput.setText("");
+        cmbChoice.setSelectedIndex(0);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new MyApp().setVisible(true));
+    }
+}

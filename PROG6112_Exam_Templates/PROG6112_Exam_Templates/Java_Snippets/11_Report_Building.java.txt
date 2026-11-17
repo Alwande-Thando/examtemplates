@@ -1,0 +1,9 @@
+StringBuilder report = new StringBuilder();
+report.append("REPORT TITLE\n");
+report.append("--------------------\n");
+report.append("Name: ").append(name).append("\n");
+report.append(String.format("Total: R%.2f%n", total));
+report.append(String.format("Average: R%.2f%n", average));
+
+txtOutput.setText(report.toString());
+// Save same report with PrintWriter / FileWriter if the question requires it.

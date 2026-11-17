@@ -1,0 +1,19 @@
+// Calculate each row's total, average, maximum and minimum
+for (int row = 0; row < data.length; row++) {
+    int total = 0;
+    int max = data[row][0];
+    int min = data[row][0];
+
+    for (int col = 0; col < data[row].length; col++) {
+        int value = data[row][col];
+        total += value;
+        if (value > max) max = value;
+        if (value < min) min = value;
+    }
+
+    double average = (double) total / data[row].length;
+    System.out.println("Total: " + total);
+    System.out.println("Average: " + average);
+    System.out.println("Maximum: " + max);
+    System.out.println("Minimum: " + min);
+}

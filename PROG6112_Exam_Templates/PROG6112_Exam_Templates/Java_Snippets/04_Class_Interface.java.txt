@@ -1,0 +1,34 @@
+// Use exact interface name and method signatures from the exam.
+public interface ICalculation {
+    int calculateTotal(int[] values);
+    double calculateAverage(int[] values);
+}
+
+public class Calculation implements ICalculation {
+    @Override
+    public int calculateTotal(int[] values) {
+        int total = 0;
+        for (int value : values) total += value;
+        return total;
+    }
+
+    @Override
+    public double calculateAverage(int[] values) {
+        if (values.length == 0) return 0;
+        return (double) calculateTotal(values) / values.length;
+    }
+}
+
+// Example data class
+public class ExampleRecord {
+    private String name;
+    private double amount;
+
+    public ExampleRecord(String name, double amount) {
+        this.name = name;
+        this.amount = amount;
+    }
+    public String getName() { return name; }
+    public double getAmount() { return amount; }
+}
+// Put each public class/interface in its own matching .java file.
